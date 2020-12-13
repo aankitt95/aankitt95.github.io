@@ -1,37 +1,29 @@
-## Welcome to GitHub Pages
+# Portfolio Website 
+![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
 
-You can use the [editor on GitHub](https://github.com/aankitt95/ankitm.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+**A simple static portfolio website built with HTML, CSS and particle-js library** 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<span style="color:red">!!!The project style has been changed. Trying to give it a material look.</span>
 
-### Markdown
+**Sample Screenshot:**
+![Sample](/projects/projectss/portfolio-3.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+**Project Video:**
+[Check out the video here.](https://www.youtube.com/watch?v=_Rx7G2ycHL8)
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+## Features
+- Great Look & Feel
+- Home Page
+- Projects Page
+- About Section
+- Write to Admin Page
 
-- Bulleted
-- List
+Site is live at: [afifaniks.github.io](https://afifaniks.github.io)
 
-1. Numbered
-2. List
+## NOTES
+- ANIMATED PARTICLES ARE CREATED BY USING particle-js LIBRARY.
 
-**Bold** and _Italic_ and `Code` text
+> **ANYTHING OF THIS PROJECT CAN BE CHANGED ANYTIME SO THE VIDEO OR SCREENSHOTS MIGHT NOT BE THE SAME AS CURRENT VERSION.**
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/aankitt95/ankitm.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+> **YOU CAN REUSE MY DESIGN BUT YOU'RE SUGGESTED TO DELETE THE _googlefa6df799d11f2f58_ FILE FROM PROJECT DIRECTORY.**
