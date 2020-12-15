@@ -4,7 +4,7 @@
 }
 body { 
     font-family: 'Roboto', sans-serif;
-    color: #000000CC;
+    color: #FFFFFF;
     background-size: cover;
     background-attachment: fixed;
 	background-color: black;
@@ -168,6 +168,11 @@ li a {
 .social .fb:hover > i {
     color: blue;
 }
+
+.social .gh:hover > i {
+    color: white;
+}
+
 
 .social .ig:hover > i {
     color: #833ab4;
