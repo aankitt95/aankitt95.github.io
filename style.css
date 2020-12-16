@@ -120,7 +120,7 @@ li a {
 
 .navigation a:hover > i {
     transform: scale(1.2);
-    color: black;
+    color: #DCDCDC;
     transition: 0.4s;
 
 }
@@ -183,7 +183,7 @@ li a {
 }
 
 .social .rg:hover > i {
-    color: #15AABF;
+    color: #DC143C;
 }
 
 .social .tw:hover > i {
