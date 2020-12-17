@@ -290,5 +290,12 @@ th {
     border-radius: 10px;
 
 }
+.logo img{
+    position:absolute;
+    margin-top:0px;
+	margin-left:15px;
+	background:transparent;
+			
+}
 
 
