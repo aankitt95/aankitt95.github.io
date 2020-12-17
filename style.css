@@ -291,7 +291,10 @@ th {
 
 }
 .logo {
-    position:absolute;
+    width : 960px;
+	height: 148px;
+
+    position:fixed;
     margin-top:0px;
 	margin-left:10px;
 			
