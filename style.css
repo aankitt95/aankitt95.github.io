@@ -291,23 +291,23 @@ th {
 
 }
 .logo {
-    width : 960px;
-	height: 148px;
-
+    width : 50px;
+	height: 50px;
+  
     position:fixed;
-    margin-top:0px;
+    margin-top:10px;
 	margin-left:10px;
 			
 }
 .logo :hover {
-    transform: scale(1.1);
-    transition: 0.4s;
+    transform: scale(1.05);
+    transition: 0.3s;
 	
 
 }
 
 .logo  {
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 
