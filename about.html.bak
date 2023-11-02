@@ -35,25 +35,25 @@
     <div class="navigation">
         <ul>
             <li>
-                <a style="margin-top: 10px";href="contact.html" title="Write Me"><i class="fas fa-comment"></i></a>
+                <a href="contact.html" title="Write Me"><i class="fas fa-comment"></i></a>
             </li>
             <li>
-                <a style="margin-top: 10px";href="about.html" title="About Me"><i class="fas fa-user"></i></a>
+                <a href="about.html" title="About Me"><i class="fas fa-user"></i></a>
             </li>
             <li>
-                <a style="margin-top: 10px";href="researches.html" title="Researches"><i class="fas fa-lightbulb"></i></i></a>
+                <a href="researches.html" title="Researches"><i class="fas fa-lightbulb"></i></i></a>
             </li>
             <li>
-                <a style="margin-top: 10px"; href="projects.html" title="Projects"><i class="fas fa-project-diagram"></i></a>
+                <a href="projects.html" title="Projects"><i class="fas fa-project-diagram"></i></a>
             </li>
             <li>
-                <a style="margin-top: 10px"; href="index.html" title="Home"><i class="fas fa-home"></i></a>
+                <a href="index.html" title="Home"><i class="fas fa-home"></i></a>
             </li>
         </ul>
     </div>
 
     <div class="about">
-        
+        <p style="color:#DCDCDC; font-size: 40px">About Me</p>
         <a class="about-profile" href="index.html"><img class="about-profile" src="assets/images/dp.jpg"
                 alt="Display Picture"></a><br><br>
 
