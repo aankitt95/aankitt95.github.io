@@ -35,15 +35,17 @@ a:visited {
 }
 
 img.profile {
-    width: 200px;
-    height: 200px;
-    border: 0px;
+    width: 180px;       /* control size */
+    height: auto;       /* maintain aspect ratio */
+    aspect-ratio: 1 / 1;
+    object-fit: cover;  /* fills circle nicely */
+    
+    border-radius: 50%; /* perfect circle */
+    
     display: inline-block;
-    margin-top: 5px;
-    border-style: solid;
-    border-color: grey;
-    border-radius: 100px 100px 100px 100px;
-    transition: 0.4s;
+    margin-top: 10px;
+    
+    transition: 0.3s ease;
 }
 
 .profile img:hover {
@@ -51,12 +53,17 @@ img.profile {
     border-radius: 5px 5px 5px 5px;
 }
 
+.about-profile {
+  text-align: center;
+}
+
 img.about-profile {
     width: 210px;
     height: 210px;
     border: 2px;
-    display: inline-block;
-    margin-top: 20px;
+    display: block;
+    margin-top: 50px;
+    margin-left: 500px;
     border-style: solid;
     border-color: grey;
     border-radius: 5px 5px 5px 5px;
@@ -66,16 +73,6 @@ img.about-profile {
 .about-profile img:hover {
     transform: scale(0.95);
     border-radius: 100px 100px 100px 100px;
-}
-
-.about {
-    padding: 15px 15px 15px 15px; 
-    background-color: #ffffff18; 
-    color: white; 
-    font-size: 14px;
-    margin: 15px 10px 10px 15px; 
-    border-radius: 4px 4px 4px 4px;
-    text-align: center;
 }
 
 ul {
@@ -113,8 +110,9 @@ li a {
 }
 
 .navigation a {
-    color: grey;
+    color: white;
     font-size: 24px;
+    padding: 30px 35px 0 0; /* top right bottom left */
     transition: 0.4s;
 }
 
@@ -243,6 +241,7 @@ li a {
 #particles-js {
     height: 100%;
     width: 100%;
+    background-color: #ffffff !important;
     background-size: cover; 
     background-repeat: no-repeat;
 }
@@ -291,14 +290,28 @@ th {
 
 }
 .logo {
-    width : 50px;
-	height: 50px;
+    width : 20px;
+	height: 20px;
   
-    position:fixed;
+    position:absolute;
     margin-top:10px;
-	margin-left:10px;
+	margin-left:0px;
+    z-index: 1000;
 			
 }
+.logo img {
+    width: 120px;
+    height: auto;
+    filter: invert(1); /* makes black → white */
+    background-color: black;
+   /* padding: 10px;
+   /* border-radius: 6px; /* optional */
+}
+.logo img:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
 .logo :hover {
     transform: scale(1.05);
     transition: 0.3s;
