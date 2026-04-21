@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+* {
+    box-sizing: border-box;
+}
 body { 
     font-family: 'Roboto', sans-serif;
     color: #FFFFFF;
@@ -97,49 +100,32 @@ li a {
 }
 
 .social {
-    position: relative;
     display: flex;
     justify-content: center;
-    margin-top: 30px;   
-    top: 50%;
-    bottom: 50%;
-    left: 50%;
-    padding-top: 20px;
-    margin: 0 0 0 0 auto;
-    transform: translate(-50%, -50%);
-}
-
-.navigation a {
-    color: white;
-    font-size: 24px;
-    padding: 30px 35px 0 0; /* top right bottom left */
-    transition: 0.4s;
-}
-
-.navigation a:hover > i {
-    transform: scale(1.2);
-    color: #DCDCDC;
-    transition: 0.4s;
-
-}
-
-.navigation a i {
-    transition: 0.4s;
+    gap: 20px;
+    margin-top: -10px;
+    position: relative;
+    transition: 0.3s ease;
 }
 
 .social a {
     display: inline-flex;
     text-decoration: none;
+    opacity: 0.85;
+    transition: 0.3s;
+    transform: scale(0.9);
     width: 50px;
     height: 50px;
     background: #00000022;
-    color: grey;
+    transition: 0.3s;
     margin: 0 6px;
     border-radius: 50%;
     justify-content: center;
     font-size: 25px;
     align-items: center;
-    transition: 0.4s;
+    transform: translateY(-4px) scale(1.1);
+    color: #00eaff;
+    
 }
 
 .social a i {
@@ -148,7 +134,10 @@ li a {
 
 .social a:hover > i {
     transform: scale(1.4) rotate(25deg);
-    color: black;
+    color: #00eaff;
+    transform: translateY(-3px);
+    opacity: 1;
+    
 
 }
 
@@ -239,26 +228,25 @@ li a {
 }
 
 #particles-js {
-    height: 100%;
-    width: 100%;
-    background-color: #ffffff !important;
-    background-size: cover; 
-    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
 }
 
-#particles-js canvas{
-    position: fixed;
+#particles-js canvas {
+    position: absolute;
+    opacity: 0.8;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 0;
 }
 
 footer {
-    position: fixed; 
-    bottom: 0; 
-    left: 0; 
-    right: 0; 
-    font-size: 10px;
+    margin-top: 10px;
+    opacity: 0.6;
 }
     
 table{
@@ -290,22 +278,15 @@ th {
 
 }
 .logo {
-    width : 20px;
-	height: 20px;
-  
-    position:absolute;
-    margin-top:10px;
-	margin-left:0px;
-    z-index: 1000;
-			
+    display: flex;
+    align-items: center;
+    margin-left: -20px;
 }
 .logo img {
-    width: 120px;
+    width: 100px;
     height: auto;
-    filter: invert(1); /* makes black → white */
-    background-color: black;
-   /* padding: 10px;
-   /* border-radius: 6px; /* optional */
+    filter: invert(1);
+    background: transparent;
 }
 .logo img:hover {
             opacity: 1;
@@ -315,12 +296,194 @@ th {
 .logo :hover {
     transform: scale(1.05);
     transition: 0.3s;
-	
-
 }
 
-.logo  {
+/* ===== NAVBAR NEW ===== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 5px 30px; /* was 60px → reduce */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.2); /* 👈 transparent */
+    backdrop-filter: blur(1px);    /* 👈 glass effect */
+
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 18px;
+    font-weight: 500;
     transition: 0.3s;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+    color: #00eaff;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #00e5ff;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+body > *:not(#particles-js) {
+    position: relative;
+    z-index: 10;
+}
+
+.hero {
+    height: 100vh;
+    animation: fadeUp 1s ease forwards;
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: flex-start; /* ❌ remove center */
+    
+    padding-top: 10px; /* 👈 THIS moves everything up */
+    
+    text-align: center;
+    gap: 10px;
+}
+
+/* Name */
+.hero h1 {
+    font-size: 52px;
+    font-weight: 700;
+    margin-top: -5px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.15);
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 22px;
+    color: #ccc;
+    margin-top: 0px;
+    text-shadow: 0 0 8px rgba(255,255,255,0.1);
+    opacity: 0.85;
+}
+
+/* Skills */
+.skills {
+    color: #aaa;   /* was too dim */
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+/* Profile */
+.profile {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+
+    margin-top: -30px; /* reset */
+}
+
+.profile:hover {
+    transform: scale(1.05);
+}
+
+.cta-buttons {
+    margin-top: 35px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 14px 30px;
+    margin-top: -10px;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Glow effect */
+.btn.primary {
+    background: #00e5ff;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+}
+
+.btn.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 12px rgba(0, 234, 255, 0.6);
+}
+
+.btn.secondary {
+    border: 1px solid #00e5ff;
+    color: #00e5ff;
+    opacity: 0.85;
+}
+
+.btn.secondary:hover {
+    background: #00e5ff;
+    color: black;
+}
+.scroll-down {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    font-size: 20px;
+    opacity: 0.6;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+.scroll-down {
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
