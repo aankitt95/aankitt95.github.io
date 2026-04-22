@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body { 
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #FFFFFF;
     background-size: cover;
     background-attachment: fixed;
@@ -283,10 +283,12 @@ th {
     margin-left: -20px;
 }
 .logo img {
-    width: 100px;
+    
     height: auto;
     filter: invert(1);
     background: transparent;
+    width: 100px;
+    
 }
 .logo img:hover {
             opacity: 1;
@@ -320,29 +322,41 @@ th {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 10px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #ccc;
-    font-size: 18px;
-    font-weight: 500;
-    transition: 0.3s;
+    color: #888;
+
+    font-size: 12px;              /* 👈 smaller like screenshot */
+    font-weight: 600;
+    letter-spacing: 4px;          /* 👈 THIS is the main magic */
+    text-transform: uppercase;
+
+    padding: 6px 14px;
+
     position: relative;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 /* Hover effect */
 .nav-links a:hover {
     color: #00eaff;
 }
+.nav-links a.active {
+  color: #00eaff;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
 
 .nav-links a::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: -3px;
     width: 0%;
     height: 2px;
     background: #00e5ff;
@@ -485,5 +499,6 @@ body > *:not(#particles-js) {
         transform: translateY(0);
     }
 }
+
 
 
